@@ -1,5 +1,0 @@
-################################################################3
-####################PERSONAL ALIASES#############################3
-#############################################################33##
-alias pdf="img2pdf"
-alias backup="rsync -av /home/mike/.bashrc /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/"
