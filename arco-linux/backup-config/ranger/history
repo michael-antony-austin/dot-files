@@ -1,0 +1,22 @@
+mkdir i3
+mkdir .fonts
+search etcc
+shell vim xorg.conf
+mkdir database
+mkdir backup
+shell 
+search resolv.co
+shell sud
+shell sudo vim resolv.conf
+search resolv.conf
+search resolv.con
+search man
+
+delete
+open_with vim
+search sudoers
+search group
+mkdir src
+rename 1.jpg
+rename 2.jpg
+rename 3.jpg
