@@ -17,7 +17,8 @@ alias xv="vim ~/.vimrc"
                       FUNCTIONS
 #############################################################		      
 gbackup () {
+	cd /home/mike/Public/dot-files
 	git add /home/mike/Public/dot-files/
-	git commit -m "update"
+	git commit -m "updated on $(date)"
 	git push
 }	
