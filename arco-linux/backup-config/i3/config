@@ -42,10 +42,10 @@ set $mod Mod4
 
 
 #This is setup for qwerty
-set $up l
-set $down k
-set $left j
-set $right semicolon
+#set $up l
+#set $down k
+#set $left j
+#set $right semicolon
 
 #This is setup for azerty
 #set $up l
@@ -408,7 +408,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 # terminal
 bindsym $mod+Return exec --no-startup-id termite;focus
-bindsym $mod+Ctrl+Return exec --no-startup-id urxvt;focus
+bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
 bindsym --release $mod+Escape exec xkill
 
 
@@ -536,9 +536,12 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 
 # bar toggle, hide or show
-bindsym $mod+b exec firefox 
-
-
+bindsym $mod+b exec --no-startup-id firefox;focus 
+bindsym $mod+p exec --no-startup-id thunar;focus
+bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
+bindsym $mod+g exec --no-startup-id gimp;focus 
+bindsym $mod+r exec --no-startup-id rhythmbox;focus
+bindsym $mod+l exec --no-startup-id libreoffice;focus
 #####################################################################################################################
 #################                          border control                                           #################
 #####################################################################################################################
