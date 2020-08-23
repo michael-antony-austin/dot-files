@@ -20,7 +20,6 @@ gbackup () {
 	cd /home/mike/Public/dot-files
 	git add /home/mike/Public/dot-files/
 	git commit -m "regular update"
-	git status
 	git push
 	cd --
 }	
