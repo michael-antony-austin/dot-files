@@ -197,6 +197,9 @@ bindsym $mod+q kill
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+for_window [floating] move absolute position center
+floating_maximum_size 1050 x 400
+
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -236,11 +239,6 @@ bindsym $mod+Shift+Right move right
 # next/previous workspace
 
 bindsym $mod+Tab workspace back_and_forth
-
-# switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
-
-
 
 
 
@@ -299,10 +297,10 @@ bindsym $mod+apostrophe focus parent
 ###        bindsym Escape mode "default"
 ###}
 
-bindsym $mod+Ctrl+Right          resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Left          resize shrink width 5 px or 5 ppt
 bindsym $mod+Ctrl+Up             resize grow height 5 px or 5 ppt
 bindsym $mod+Ctrl+Down           resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+Left           resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Right           resize grow width 5 px or 5 ppt
 
 
 
@@ -705,3 +703,4 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # get the mouse out of the way with unclutter
 #exec --no-startup-id unclutter
+
