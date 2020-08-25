@@ -385,7 +385,7 @@ exec_always --no-startup-id numlockx off
 exec --no-startup-id volumeicon
 #exec --no-startup-id xfce4-clipman
 exec --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/arch02.png
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/arch-key.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################

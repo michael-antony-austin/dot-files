@@ -109,8 +109,8 @@ border-color = #000000
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 5
+module-margin-right = 5
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
@@ -118,9 +118,9 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = i3 xwindow
+modules-left = date
 modules-center = 
-modules-right = kernel memory2 networkspeeddown battery cpu2 temperature2 date
+modules-right = temperature2 memory1 cpu1 networkspeedup networkspeeddown battery xbacklight volume kernel 
 
 ;separator = |
 
@@ -213,9 +213,9 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = load-average
-modules-center = networkspeeddown networkspeedup
-modules-right = filesystem
+modules-left = i3 
+modules-center = xwindow
+modules-right = 
 
 separator = |
 
@@ -1316,8 +1316,8 @@ type = internal/date
 interval = 5
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %Y-%m-%d%"
-date-alt = " %d-%m-%Y"
+date = " %d-%m-%Y"
+date-alt = " %Y-%m-%d  %A"
 time = %H:%M
 time-alt = %H:%M
 format-prefix = " "
@@ -1590,9 +1590,9 @@ format-online-background = ${colors.background}
 [module/networkspeedup]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-;interface = wlp3s0
+interface = wlp2s0
 ;interface = enp14s0
-interface = enp0s31f6
+;interface = enp0s31f6
 ;interface = enp4s0
 label-connected = "%upspeed:7%"
 format-connected = <label-connected>
@@ -1600,7 +1600,7 @@ format-connected-prefix = ""
 format-connected-prefix-foreground = #FE522C
 format-connected-foreground = ${colors.foreground}
 format-connected-background = ${colors.background}
-;format-connected-underline = #62FF00
+format-connected-underline = #FE522C
 
 ################################################################################
 
@@ -1767,8 +1767,9 @@ format-padding = 1
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
 format-underline = #C1B93E
+format-prefix = 
 format-prefix-foreground = #C1B93E
-label =  %output:0:150:%
+label = %output:0:150:%
 
 ################################################################################
 
@@ -1807,8 +1808,9 @@ click-left = variety --selector
 ;https://github.com/jaagr/polybar/wiki/Module:-volume
 type = internal/volume
 format-volume = "<label-volume>  <bar-volume>"
+format-volume-underline = #40ad4b 
 
-label-volume = " "
+label-volume = "  %percentage%%"
 label-volume-foreground = #40ad4b
 label-muted = muted
 
@@ -1928,7 +1930,7 @@ ramp-signal-foreground = #7e52c6
 type = internal/xbacklight
 format = <label> <bar>
 format-prefix = "   "
-format-prefix-foreground = ${colors.foreground}
+format-prefix-foreground = #7D49B6
 format-prefix-background = ${colors.background}
 format-prefix-underline = #9f78e1
 format-underline = #9f78e1
@@ -1977,7 +1979,7 @@ type = internal/xwindow
 ;   %title%
 ; Default: %title%
 label = %title%
-label-maxlen = 75
+label-maxlen = 150
 
 format-foreground = ${colors.foreground}
 format-background = ${colors.background}
