@@ -1,10 +1,10 @@
- #####   #####                                           
-   #    #     #                ##   #####   ####   ####  
-   #          #               #  #  #    # #    # #    # 
-   #     #####    #########  #    # #    # #      #    # 
-   #          #              ###### #####  #      #    # 
-   #    #     #              #    # #   #  #    # #    # 
- #####   #####               #    # #    #  ####   ####  
+#         #####   #####                                           
+#           #    #     #                ##   #####   ####   ####  
+#           #          #               #  #  #    # #    # #    # 
+#           #     #####    #########  #    # #    # #      #    # 
+#           #          #              ###### #####  #      #    # 
+#           #    #     #              #    # #   #  #    # #    # 
+#         #####   #####               #    # #    #  ####   ####  
 #####################################################################################################################
 #####################################################################################################################
 #################                          Start of all the settings                                #################
@@ -411,11 +411,16 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 
 
-# terminal
 bindsym $mod+Return exec --no-startup-id termite;focus
 bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
 bindsym --release $mod+Escape exec xkill
-
+bindsym $mod+b exec --no-startup-id firefox;focus 
+bindsym $mod+p exec --no-startup-id thunar;focus
+bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
+bindsym $mod+g exec --no-startup-id gimp;focus 
+bindsym $mod+r exec --no-startup-id rhythmbox;focus
+bindsym $mod+l exec --no-startup-id libreoffice;focus
+bindsym $mod+v exec --no-startup-id pavucontrol;focus
 
 #####################################################################################################################
 #################                          screenshots                                              #################
@@ -533,20 +538,6 @@ bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
-
-
-#####################################################################################################################
-#################                          bar toggle                                               #################
-#####################################################################################################################
-
-
-# bar toggle, hide or show
-bindsym $mod+b exec --no-startup-id firefox;focus 
-bindsym $mod+p exec --no-startup-id thunar;focus
-bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
-bindsym $mod+g exec --no-startup-id gimp;focus 
-bindsym $mod+r exec --no-startup-id rhythmbox;focus
-bindsym $mod+l exec --no-startup-id libreoffice;focus
 #####################################################################################################################
 #################                          border control                                           #################
 #####################################################################################################################
