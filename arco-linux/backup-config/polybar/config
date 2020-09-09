@@ -1324,8 +1324,8 @@ interval = 1
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
 date = " %d-%m-%Y"
 date-alt = " %d-%m-%Y  %A"
-time = %H:%M:%S
-time-alt = %H:%M
+time = %H:%M
+time-alt = %H:%M:%S
 format-prefix = " "
 format-prefix-foreground = #c1941a
 format-underline = #c1941a

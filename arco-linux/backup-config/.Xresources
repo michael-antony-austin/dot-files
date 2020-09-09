@@ -24,10 +24,10 @@ URxvt*colorUL:      	 #87afd7
 
 ! fonts
 URxvt*letterSpace: 	    		-2
-URxvt*font:                 	xft:Hack:regular:size=10
-URxvt*imFont:               	xft:Hack:regular:size=10
-URxvt*boldFont:             	xft:Hack:bold:size=10
-URxvt*italicFont:           	xft:Hack:italic:size=10
+URxvt*font:                 	xft:Monospace:regular:size=11
+URxvt*imFont:               	xft:Monospace:regular:size=11
+URxvt*boldFont:             	xft:Monospace:bold:size=11
+URxvt*italicFont:           	xft:Monospace:italic:size=11
 URxvt*boldItalicFont:     		xft:Monospace:regular:size=12
 ! run :.!fc-list | grep <font-name>
 
@@ -75,7 +75,7 @@ URxvt*keysym.Control-Shift-V: perl:clipboard:paste
 
 ! red
 *.color1:       #7c7c7c
-*.color9:       #7c7c7c
+*.color9:       #e00000
 
 ! green
 *.color2:       #8e8e8e
