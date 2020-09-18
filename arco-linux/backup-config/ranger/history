@@ -24,3 +24,5 @@ search lightdm
 search 55
 open_with 
 delete
+open_with%space
+search discord
