@@ -46,12 +46,12 @@ format-offset =
 
 [colors]
 ; Nord theme ============
-background = #2F343F
-foreground = #f3f4f5
-alert = #d08770
-volume-min = #a3be8c
-volume-med = #ebcb8b
-volume-max = #bf616a
+;background = #2F343F
+;foreground = #f3f4f5
+;alert = #d08770
+;volume-min = #a3be8c
+;volume-med = #ebcb8b
+;volume-max = #bf616a
 ; =======================
 
 ; Gotham theme ==========
@@ -65,14 +65,14 @@ volume-max = #bf616a
 
 ; INTRCPTR theme ============
 ;background = ${xrdb:color0:#222}
-;background = #aa000000
-;background-alt = #444
+background = #aa000000
+background-alt = #444
 ;foreground = ${xrdb:color7:#222}
-;foreground = #fff
-;foreground-alt = #555
-;primary = #ffb52a
-;secondary = #e60053
-;alert = #bd2c40
+foreground = #fff
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
 
 ################################################################################
 ################################################################################
@@ -115,8 +115,8 @@ border-color = #000000
 padding-left = 1
 padding-right = 1
 
-module-margin-left = 5
-module-margin-right = 5
+module-margin-left = 4
+module-margin-right = 4
 
 ;https://github.com/jaagr/polybar/wiki/Fonts
 font-0 = "Noto Sans:size=10;0"
@@ -124,7 +124,7 @@ font-1 = "FontAwesome:size=10;0"
 font-2 = "Noto Sans:size=10;0"
 font-3 = "Noto Sans Mono:size=10;0"
 
-modules-left = date temperature2 memory1 cpu1 networkspeeddown 
+modules-left = date temperature2 memory1 cpu1 load-average networkspeeddown 
 modules-center = 
 modules-right =  networkspeedup battery xbacklight volume kernel 
 
@@ -1465,7 +1465,7 @@ format-underline = #0084FF
 
 [module/jgmenu]
 type = custom/script
-interval = 120
+interval = 1
 exec = echo "ArcoLinux"
 click-left = "jgmenu_run >/dev/null 2>&1 &"
 format-foreground = ${colors.foreground}
@@ -1476,7 +1476,7 @@ format-background = ${colors.background}
 [module/load-average]
 type = custom/script
 exec = uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5"," }' | sed 's/,//g'
-interval = 100
+interval = 1
 
 ;HOW TO SET IT MINIMAL 10 CHARACTERS - HIDDEN BEHIND SYSTEM ICONS
 ;label = %output%

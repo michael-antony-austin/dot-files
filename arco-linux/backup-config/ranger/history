@@ -22,7 +22,8 @@ rename 3.jpg
 mkdir english
 search lightdm
 search 55
-open_with 
-delete
 open_with%space
 search discord
+delete
+search sys
+open_with 
