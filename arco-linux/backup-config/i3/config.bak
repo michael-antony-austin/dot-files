@@ -1,3 +1,10 @@
+#         #####   #####                                           
+#           #    #     #                ##   #####   ####   ####  
+#           #          #               #  #  #    # #    # #    # 
+#           #     #####    #########  #    # #    # #      #    # 
+#           #          #              ###### #####  #      #    # 
+#           #    #     #              #    # #   #  #    # #    # 
+#         #####   #####               #    # #    #  ####   ####  
 #####################################################################################################################
 #####################################################################################################################
 #################                          Start of all the settings                                #################
@@ -42,10 +49,10 @@ set $mod Mod4
 
 
 #This is setup for qwerty
-set $up l
-set $down k
-set $left j
-set $right semicolon
+#set $up l
+#set $down k
+#set $left j
+#set $right semicolon
 
 #This is setup for azerty
 #set $up l
@@ -131,8 +138,9 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 #####################################################################################################################
 
 # start dmenu
-bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
-bindsym $mod+Shift+d exec --no-startup-id gmrun
+bindsym $mod+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#006ef1' -sb '#006ef1' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
+bindsym $mod+Control+d exec --no-startup-id gmrun
+bindsym $mod+Shift+d exec --no-startup-id rofi -show combi
 bindsym $mod+F1 exec --no-startup-id xfce4-appfinder
 bindsym $mod+F2 exec --no-startup-id catfish;focus
 bindsym $mod+F3 exec --no-startup-id arcolinux-tweak-tool
@@ -185,7 +193,6 @@ bindsym $mod+Shift+c reload
 #####################################################################################################################
 
 # kill focused window
-bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 
@@ -197,6 +204,9 @@ bindsym $mod+q kill
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
+for_window [floating] move absolute position center
+floating_maximum_size 1050 x 700
+
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -236,11 +246,6 @@ bindsym $mod+Shift+Right move right
 # next/previous workspace
 
 bindsym $mod+Tab workspace back_and_forth
-
-# switch to workspace with urgent window automatically
-for_window [urgent=latest] focus
-
-
 
 
 
@@ -299,10 +304,10 @@ bindsym $mod+apostrophe focus parent
 ###        bindsym Escape mode "default"
 ###}
 
-bindsym $mod+Ctrl+Right          resize shrink width 5 px or 5 ppt
+bindsym $mod+Ctrl+Left          resize shrink width 5 px or 5 ppt
 bindsym $mod+Ctrl+Up             resize grow height 5 px or 5 ppt
 bindsym $mod+Ctrl+Down           resize shrink height 5 px or 5 ppt
-bindsym $mod+Ctrl+Left           resize grow width 5 px or 5 ppt
+bindsym $mod+Ctrl+Right           resize grow width 5 px or 5 ppt
 
 
 
@@ -387,7 +392,7 @@ exec_always --no-startup-id numlockx off
 exec --no-startup-id volumeicon
 #exec --no-startup-id xfce4-clipman
 exec --no-startup-id conky -c ~/.config/i3/system-overview
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/mochrome-black.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################
@@ -406,11 +411,19 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 
 
-# terminal
 bindsym $mod+Return exec --no-startup-id termite;focus
-bindsym $mod+Ctrl+Return exec --no-startup-id urxvt;focus
+bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
+bindsym $mod+Control+Return exec --no-startup-id xfce4-terminal;focus
 bindsym --release $mod+Escape exec xkill
-
+bindsym $mod+b exec --no-startup-id firefox;focus 
+bindsym $mod+Shift+b exec --no-startup-id chromium;focus
+bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
+bindsym $mod+p exec --no-startup-id thunar;focus
+bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
+bindsym $mod+g exec --no-startup-id gimp;focus 
+bindsym $mod+r exec --no-startup-id rhythmbox;focus
+bindsym $mod+l exec --no-startup-id libreoffice;focus
+bindsym $mod+v exec --no-startup-id pavucontrol;focus
 
 #####################################################################################################################
 #################                          screenshots                                              #################
@@ -528,17 +541,6 @@ bindsym XF86AudioMute exec --no-startup-id "amixer -D pulse set Master toggle"
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease screen brightness
 
-
-
-#####################################################################################################################
-#################                          bar toggle                                               #################
-#####################################################################################################################
-
-
-# bar toggle, hide or show
-bindsym $mod+b exec firefox 
-
-
 #####################################################################################################################
 #################                          border control                                           #################
 #####################################################################################################################
@@ -619,32 +621,17 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 #####################################################################################################################
 
     ##START THEMING WM
-    #Theme name : ArcoLinux Zion
+    #Theme name : ArcoLinux Default
 
     # Window color settings
-    # class  border background text indicator
+    # class                 border  backgr. text    indicator
+    client.focused          #6790EB #6790EB #e5e5e5 #6790EB
+    client.unfocused        #222222 #222222 #aaaaaa #222222
+    client.focused_inactive #222222 #222222 #a9a9a9 #222222
+    client.placeholder      #222222 #222222 #aaaaaa #222222
+    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
 
-    # A client which currently has the focus.
-    client.focused #9742b5 #9742b5 #ffffff #9742b5
-
-    # A client which is not the focused one of its container.
-    client.unfocused #2C2C2C #2C2C2C #ffffff #2C2C2C
-
-    # A client which is the focused one of its container, but it does not have the focus at the moment.
-    client.focused_inactive #2C2C2C #2C2C2C #ffffff #2C2C2C
-
-    # Background and text color are used to draw placeholder window
-    # contents (when restoring layouts). Border and indicator are ignored.
-    client.placeholder #2C2C2C #2C2C2C #ffffff #2C2C2C
-
-    # A client which has its urgency hint activated.
-    client.urgent #d42121 #d42121 #f7f7f7 #d42121
-
-    # Background color which will be used to paint the background
-    # of the client window on top of which the client will be rendered.
-    # Only clients which do not cover the whole area of this window expose
-    # the color. Note that this colorclass only takes a single color.
-    client.background       #000000
+    client.background       #242424
 
     ##STOP THEMING WM
 
@@ -717,3 +704,4 @@ exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 
 # get the mouse out of the way with unclutter
 #exec --no-startup-id unclutter
+
