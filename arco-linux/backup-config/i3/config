@@ -392,7 +392,7 @@ exec_always --no-startup-id numlockx off
 exec --no-startup-id volumeicon
 #exec --no-startup-id xfce4-clipman
 exec --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/mochrome-black.jpg
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/cpu-blue.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################
@@ -416,7 +416,7 @@ bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
 bindsym $mod+Control+Return exec --no-startup-id xfce4-terminal;focus
 bindsym --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
-bindsym $mod+Shift+b exec --no-startup-id chromium;focus
+bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
 bindsym $mod+p exec --no-startup-id thunar;focus
 bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
