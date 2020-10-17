@@ -25,3 +25,11 @@ gbackup () {
 	git push
 	cd --
 }	
+
+myskel () {
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/i3/config /home/mike/.config/i3/config
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/polybar/config /home/mike/.config/polybar/config
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/polybar/launch.sh /home/mike/.config/polybar/launch.sh
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/.Xresources /home/mike/.Xresources
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/i3/system-overview /home/mike/.config/i3/system-overview
+}
