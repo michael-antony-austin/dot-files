@@ -26,5 +26,7 @@ open_with%space
 search discord
 search sys
 open_with 
-delete
 search skel
+search environment
+search hostname
+delete
