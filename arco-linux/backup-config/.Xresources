@@ -24,8 +24,8 @@ URxvt*colorUL:      	 #87afd7
 
 ! fonts
 URxvt*letterSpace: 	    		-2
-URxvt*font:                 	xft:Monospace:regular:size=11
-URxvt*imFont:               	xft:Monospace:regular:size=11
+URxvt*font:                 	xft:SauceCodePro Nerd Font:regular:size=11
+URxvt*imFont:               	xft:SauceCodePro Nerd Font:regular:size=11
 URxvt*boldFont:             	xft:Monospace:bold:size=11
 URxvt*italicFont:           	xft:Monospace:italic:size=11
 URxvt*boldItalicFont:     		xft:Monospace:regular:size=12

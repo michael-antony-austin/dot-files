@@ -29,4 +29,8 @@ open_with
 search skel
 search environment
 search hostname
+rename backup-config
+search youtube
+search youtube-dl
+mkdir plugins
 delete
