@@ -191,7 +191,7 @@ alias sr="sudo reboot"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
-ex ()
+ext ()
 {
   if [ -f $1 ] ; then
     case $1 in

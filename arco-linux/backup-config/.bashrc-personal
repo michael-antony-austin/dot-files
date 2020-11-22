@@ -11,6 +11,7 @@ alias xp="vim ~/.config/polybar/config"
 alias xb="vim ~/.bashrc"
 alias xx="vim ~/.Xresources"
 alias xv="vim ~/.vimrc"
+alias xa='vim ~/.config/awesome/rc.lua'
 
 
 

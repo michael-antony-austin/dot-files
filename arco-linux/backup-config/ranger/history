@@ -1,18 +1,9 @@
-mkdir i3
-mkdir .fonts
-search etcc
-shell vim xorg.conf
-mkdir database
-mkdir backup
-shell 
 search resolv.co
 shell sud
 shell sudo vim resolv.conf
 search resolv.conf
 search resolv.con
 search man
-
-open_with vim
 search sudoers
 search group
 mkdir src
@@ -33,4 +24,27 @@ rename backup-config
 search youtube
 search youtube-dl
 mkdir plugins
+cd 
+open_with%space terminal
+mkdir terminal
+mkdir colorschemes
+vim 
+touch me
+rename me.theme
+shell har
+shel
+s
+search xfce4
+search xdg
+search doc
+search picom
+search fstab
+search etc
+search default
+search usr
+search share
+search kbd
+search no
+open_with vim
+
 delete

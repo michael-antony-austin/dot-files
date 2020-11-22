@@ -386,10 +386,10 @@ for_window [class="Vivaldi-stable"] focus
 # you may see a wheel - hashtag out things you do not want
 
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id pamac-tray
+#exec --no-startup-id pamac-tray
 exec --no-startup-id nm-applet
 exec_always --no-startup-id numlockx off
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 #exec --no-startup-id xfce4-clipman
 exec --no-startup-id conky -c ~/.config/i3/system-overview
 exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/cpu-blue.jpg
@@ -424,6 +424,7 @@ bindsym $mod+g exec --no-startup-id gimp;focus
 bindsym $mod+m exec --no-startup-id deadbeef;focus
 bindsym $mod+l exec --no-startup-id libreoffice;focus
 bindsym $mod+v exec --no-startup-id pavucontrol;focus
+bindsym $mod+t exec --no-startup-id gpicview
 
 #####################################################################################################################
 #################                          screenshots                                              #################
@@ -585,8 +586,8 @@ popup_during_fullscreen smart
 for_window [class="^.*"] border pixel 2
 gaps inner 5
 gaps outer 5
+smart_borders on
 #smart_gaps on
-#smart_borders on
 
 
 
