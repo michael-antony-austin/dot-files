@@ -4,7 +4,6 @@ export PS1
 ####################PERSONAL ALIASES#############################3
 #############################################################33##
 alias img="img2pdf"
-alias backup="rsync -av /home/mike/.bashrc /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/"
 alias xbp="vim ~/.bashrc-personal"
 alias xi="vim ~/.config/i3/config"
 alias xp="vim ~/.config/polybar/config"
@@ -12,6 +11,7 @@ alias xb="vim ~/.bashrc"
 alias xx="vim ~/.Xresources"
 alias xv="vim ~/.vimrc"
 alias xa='vim ~/.config/awesome/rc.lua'
+alias backup='rsync -av /home/mike/.bashrc /home/mike/.zshrc /home/mike/.zshrc-personal /home/mike/.local/share/fonts /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/awesome /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/'
 
 
 
@@ -33,4 +33,6 @@ myskel () {
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/polybar/launch.sh /home/mike/.config/polybar/launch.sh
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/.Xresources /home/mike/.Xresources
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/i3/system-overview /home/mike/.config/i3/system-overview
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/rc.lua /home/mike/.config/awesome/rc.lua
+        cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/system-overview /home/mike/.config/awesome/system-overview
 }

@@ -1,7 +1,3 @@
-search resolv.co
-shell sud
-shell sudo vim resolv.conf
-search resolv.conf
 search resolv.con
 search man
 search sudoers
@@ -41,10 +37,14 @@ search picom
 search fstab
 search etc
 search default
-search usr
-search share
 search kbd
 search no
 open_with vim
 
+search back
+vim system-overview
+shell vim system-overview
 delete
+search usr
+search share
+search background
