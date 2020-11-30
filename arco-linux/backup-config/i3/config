@@ -348,7 +348,6 @@ font pango:Noto Mono Regular 13
 
 # Workspace 5 Images and meld
 #assign [class="ristretto|Ristretto|shotwell|Shotwell|Xviewer|Nitrogen"]             → 5
-#assign [class="feh|gthumb|Gthumb|eog|Eog|Pinta|pixeluvo|Pixeluvo"]                  → 5
 #assign [class="Meld"]                                                               → 5
 
 # Workspace 6 all video related software
@@ -392,7 +391,7 @@ exec_always --no-startup-id numlockx off
 #exec --no-startup-id volumeicon
 #exec --no-startup-id xfce4-clipman
 exec --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/i3/cpu-blue.jpg
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/road.png
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################
@@ -414,7 +413,7 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 bindsym $mod+Return exec --no-startup-id termite;focus
 bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
 bindsym $mod+Control+Return exec --no-startup-id xfce4-terminal;focus
-bindsym --release $mod+Escape exec xkill
+bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
@@ -425,9 +424,10 @@ bindsym $mod+m exec --no-startup-id deadbeef;focus
 bindsym $mod+l exec --no-startup-id libreoffice;focus
 bindsym $mod+v exec --no-startup-id pavucontrol;focus
 bindsym $mod+t exec --no-startup-id gpicview
+bindsym $mod+s exec --no-startup-id scrcpy
 
 #####################################################################################################################
-#################                          screenshots                                              #################
+#################                          custom                                                   #################
 #####################################################################################################################
 
 

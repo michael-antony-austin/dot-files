@@ -13,8 +13,9 @@ run "nm-applet"
 run "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 run "volumeicon"
 run "conky -c $HOME/.config/awesome/system-overview"
+run "xfce4-power-manager"
 #you can set wallpapers in themes as well
-feh --bg-fill /usr/share/backgrounds/archlinux/conference.png
+feh --bg-fill /usr/share/backgrounds/archlinux/geowaves.png
 #run applications from startup
 #run "firefox"
 #run "atom"

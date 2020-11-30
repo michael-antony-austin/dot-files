@@ -1,10 +1,3 @@
-search resolv.con
-search man
-search sudoers
-search group
-mkdir src
-rename 1.jpg
-rename 2.jpg
 rename 3.jpg
 mkdir english
 search lightdm
@@ -39,12 +32,19 @@ search etc
 search default
 search kbd
 search no
-open_with vim
-
 search back
 vim system-overview
 shell vim system-overview
-delete
 search usr
-search share
 search background
+search share
+search backgro
+open_with vim
+search grub.d
+rename amd-dna.webp
+
+shell mkdir wm-wallpapers
+delete
+rename amd-radeon.jpg
+rename amd.jpg
+search wm
