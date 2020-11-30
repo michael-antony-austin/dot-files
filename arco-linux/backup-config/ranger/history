@@ -44,7 +44,7 @@ search grub.d
 rename amd-dna.webp
 
 shell mkdir wm-wallpapers
-delete
 rename amd-radeon.jpg
 rename amd.jpg
 search wm
+delete
