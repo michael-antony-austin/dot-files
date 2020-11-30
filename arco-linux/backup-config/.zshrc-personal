@@ -1,7 +1,7 @@
 # For personal ALIASES
 
 alias ra="ranger"
-alias pacman='pacman --color auto'
+alias pacman="pacman --color auto"
 alias update='sudo pacman -Syyu'
 alias update-fc='sudo fc-cache -fv'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
