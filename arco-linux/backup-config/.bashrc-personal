@@ -12,6 +12,7 @@ alias xb="vim ~/.bashrc"
 alias xx="vim ~/.Xresources"
 alias xv="vim ~/.vimrc"
 alias xa='vim ~/.config/awesome/rc.lua'
+alias xq='vim ~/.config/qtile/config.py'
 alias backup='rsync -av /home/mike/.bashrc /home/mike/.zshrc /home/mike/.zshrc-personal /home/mike/.local/share/fonts /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/awesome /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/'
 
 

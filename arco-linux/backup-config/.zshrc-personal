@@ -16,6 +16,7 @@ alias xa='vim ~/.config/awesome/rc.lua'
 alias xp='vim ~/.config/polybar/config'
 alias xv='vim ~/.vimrc'
 alias xx='vim ~/.Xresources'
+alias xq="vim ~/.config/qtile/config.py"
 alias yta-mp3='youtube-dl --extract-audio --audio-format mp3 '
 alias ytv-best='youtube-dl -f bestvideo+bestaudio '
 alias upall='mirror && yay -Syu --noconfirm'
