@@ -1,4 +1,6 @@
 p:/
-':/home/mike/.config/qtile
+':/home/mike/.config/i3
 c:/var/cache/pacman
 k:/home/mike/.local/share/xfce4
+y:/home/mike/Documents/answers
+l:/var/log

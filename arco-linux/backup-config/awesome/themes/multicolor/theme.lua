@@ -20,7 +20,6 @@ theme.confdir                                   = os.getenv("HOME") .. "/.config
 --theme.wallpaper                                 = "/usr/share/backgrounds/arcolinux/arco-wallpaper.jpg"
 theme.font                                      = "Noto Sans Regular 11"
 theme.taglist_font                              = "Noto Sans Regular 13"
-theme.taglist_fg_focus                          = "#00bdff" 
 theme.menu_bg_normal                            = "#000000"
 theme.menu_bg_focus                             = "#000000"
 theme.bg_normal                                 = "#000000"
@@ -30,9 +29,9 @@ theme.fg_normal                                 = "#aaaaaa"
 theme.fg_focus                                  = "#ff8c00"
 theme.fg_urgent                                 = "#af1d18"
 theme.fg_minimize                               = "#ffffff"
-theme.border_width                              = dpi(3)
+theme.border_width                              = dpi(2)
 theme.border_normal                             = "#1c2022"
-theme.border_focus                              = "#009bff"
+theme.border_focus                              = "#5e81ac"
 theme.border_marked                             = "#3ca4d8"
 theme.menu_border_width                         = 0
 theme.menu_height                               = dpi(25)
@@ -102,7 +101,7 @@ local markup = lain.util.markup
 -- Textclock
 os.setlocale(os.getenv("LANG")) -- to localize the clock
 local clockicon = wibox.widget.imagebox(theme.widget_clock)
-local mytextclock = wibox.widget.textclock(markup("#8f00ff", "%A %d %B ") .. markup("#535f7a", ">") .. markup("#de5e1e", " %H:%M "))
+local mytextclock = wibox.widget.textclock(markup("#7788af", "%A %d %B ") .. markup("#535f7a", ">") .. markup("#de5e1e", " %H:%M "))
 mytextclock.font = theme.font
 
 -- Calendar
@@ -200,7 +199,7 @@ theme.volume = lain.widget.alsa({
             volume_now.level = volume_now.level .. "M"
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#00caff", volume_now.level .. "% "))
+        widget:set_markup(markup.fontfg(theme.font, "#7493d2", volume_now.level .. "% "))
     end
 })
 
@@ -216,8 +215,8 @@ local netupinfo = lain.widget.net({
             theme.weather.update()
         end
 
-        widget:set_markup(markup.fontfg(theme.font, "#ff0051", net_now.sent .. " "))
-        netdowninfo:set_markup(markup.fontfg(theme.font, "#80ff00", net_now.received .. " "))
+        widget:set_markup(markup.fontfg(theme.font, "#e54c62", net_now.sent .. " "))
+        netdowninfo:set_markup(markup.fontfg(theme.font, "#87af5f", net_now.received .. " "))
     end
 })
 
@@ -225,7 +224,7 @@ local netupinfo = lain.widget.net({
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local memory = lain.widget.mem({
     settings = function()
-        widget:set_markup(markup.fontfg(theme.font, "#fff000", mem_now.used .. "M "))
+        widget:set_markup(markup.fontfg(theme.font, "#e0da37", mem_now.used .. "M "))
     end
 })
 
@@ -314,6 +313,8 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             --mailicon,
             --mail.widget,
+            --mpdicon,
+            theme.mpd.widget,
             netdownicon,
             netdowninfo,
             netupicon,
@@ -322,10 +323,12 @@ function theme.at_screen_connect(s)
             theme.volume.widget,
             memicon,
             memory.widget,
-	    tempicon,
-	    temp.widget,
             cpuicon,
             cpu.widget,
+            weathericon,
+            theme.weather.widget,
+            tempicon,
+            temp.widget,
             baticon,
             bat.widget,
             clockicon,
@@ -336,7 +339,7 @@ function theme.at_screen_connect(s)
     }
 
     -- Create the bottom wibox
-    s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, border_width = 0, height = dpi(17), bg = theme.bg_normal, fg = theme.fg_normal })
+    s.mybottomwibox = awful.wibar({ position = "bottom", screen = s, border_width = 0, height = dpi(20), bg = theme.bg_normal, fg = theme.fg_normal })
 
     -- Add widgets to the bottom wibox
     s.mybottomwibox:setup {

@@ -115,6 +115,7 @@ theme.mail = lain.widget.imap({
 })
 --]]
 
+--[[
 -- MPD
 theme.mpd = lain.widget.mpd({
     settings = function()
@@ -133,6 +134,7 @@ theme.mpd = lain.widget.mpd({
         widget:set_markup(markup.font(theme.font, markup(gray, artist) .. title .. " "))
     end
 })
+--]]
 
 -- /home fs
 --[[ commented because it needs Gio/Glib >= 2.54

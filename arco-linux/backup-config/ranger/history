@@ -1,18 +1,3 @@
-rename 3.jpg
-mkdir english
-search lightdm
-search 55
-open_with%space
-search discord
-search sys
-open_with 
-search skel
-search environment
-search hostname
-rename backup-config
-search youtube
-search youtube-dl
-mkdir plugins
 cd 
 open_with%space terminal
 mkdir terminal
@@ -47,4 +32,19 @@ shell mkdir wm-wallpapers
 rename amd-radeon.jpg
 rename amd.jpg
 search wm
+find 
+shell 
+c
+rename config
+shell vim i3-alternating-layouts.py
+rename alternating_layouts.py
+search pacman.d
+rename picom.conf.bak
+rename picom.conf
+search down
+shell ext lucy-2014-english-yify-57997.zip 
+open_with 
+y
+search skel
+rename system-overview
 delete
