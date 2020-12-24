@@ -392,7 +392,8 @@ exec_always --no-startup-id numlockx off
 #exec --no-startup-id xfce4-clipman
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 exec_always --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/wallpaper.jpg
+#exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/wallpaper.jpg
+exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/glorious-voyage-3840x2160.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 #####################################################################################################################
