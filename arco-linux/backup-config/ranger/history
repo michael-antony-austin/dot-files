@@ -1,4 +1,3 @@
-open_with%space terminal
 mkdir terminal
 mkdir colorschemes
 vim 
@@ -46,5 +45,6 @@ open_with
 y
 search skel
 rename system-overview
-delete
 search 
+fin
+delete

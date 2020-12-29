@@ -24,7 +24,7 @@ alias merge='xrdb -merge ~/.Xresources'
 alias mirror='sudo reflector --verbose --latest 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
 alias mirrora='sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist'
 alias mirrord='sudo reflector --latest 50 --number 20 --sort delay --save /etc/pacman.d/mirrorlist'
-alias backup='rsync -av /home/mike/.bashrc /home/mike/.zshrc /home/mike/.zshrc-personal /home/mike/.local/share/fonts /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/wm-wallpapers /home/mike/.config/awesome /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/'
+alias backup='rsync -av /home/mike/.bashrc /home/mike/.zshrc /home/mike/.zshrc-personal /home/mike/.local/share/fonts /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.config/termite/config /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/wm-wallpapers /home/mike/.config/awesome /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/'
 
 
 
@@ -71,4 +71,5 @@ myskel () {
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/i3/system-overview /home/mike/.config/i3/system-overview
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/rc.lua /home/mike/.config/awesome/rc.lua
         cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/system-overview /home/mike/.config/awesome/system-overview
+	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/config /home/mike/.config/termite/config
 }

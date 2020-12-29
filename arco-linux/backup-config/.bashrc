@@ -166,11 +166,9 @@ alias jctl="journalctl -p 3 -xb"
 alias nlightdm="sudo nano /etc/lightdm/lightdm.conf"
 alias npacman="sudo nano /etc/pacman.conf"
 alias ngrub="sudo nano /etc/default/grub"
-alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
-alias nslim="sudo nano /etc/slim.conf"
-alias noblogout="sudo nano /etc/oblogout.conf"
-alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
 alias nconfgrub="sudo nano /boot/grub/grub.cfg"
+alias nmkinitcpio="sudo nano /etc/mkinitcpio.conf"
+alias nmirrorlist="sudo nano /etc/pacman.d/mirrorlist"
 alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 
 #gpg
