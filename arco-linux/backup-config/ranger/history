@@ -41,10 +41,10 @@ rename picom.conf.bak
 rename picom.conf
 search down
 shell ext lucy-2014-english-yify-57997.zip 
-open_with 
 y
-search skel
 rename system-overview
 search 
 fin
+search skel
+open_with 
 delete

@@ -428,7 +428,8 @@ bindsym $mod+v exec --no-startup-id pavucontrol;focus
 bindsym $mod+t exec --no-startup-id gpicview
 bindsym $mod+s exec --no-startup-id scrcpy
 bindsym $mod+c exec --no-startup-id cheese
-
+bindsym $mod+a exec --no-startup-id lxappearance
+bindsym $mod+Shift+a exec --no-startup-id xfce4-appearance-settings
 #####################################################################################################################
 #################                          custom                                                   #################
 #####################################################################################################################
