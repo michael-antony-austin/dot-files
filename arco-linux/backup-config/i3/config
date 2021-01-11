@@ -183,7 +183,7 @@ bindsym $mod+Ctrl+Delete exec --no-startup-id poweroff
 bindsym $mod+Shift+r restart
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+#bindsym $mod+Shift+c reload
 
 
 
@@ -428,8 +428,10 @@ bindsym $mod+v exec --no-startup-id pavucontrol;focus
 bindsym $mod+t exec --no-startup-id gpicview
 bindsym $mod+s exec --no-startup-id scrcpy
 bindsym $mod+c exec --no-startup-id cheese
+bindsym $mod+Shift+c exec --no-startup-id guvcview
 bindsym $mod+a exec --no-startup-id lxappearance
 bindsym $mod+Shift+a exec --no-startup-id xfce4-appearance-settings
+bindsym $mod+Shift+m exec --no-startup-id signal-desktop
 #####################################################################################################################
 #################                          custom                                                   #################
 #####################################################################################################################

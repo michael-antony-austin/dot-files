@@ -1,5 +1,3 @@
-mkdir terminal
-mkdir colorschemes
 vim 
 touch me
 rename me.theme
@@ -46,5 +44,7 @@ rename system-overview
 search 
 fin
 search skel
-open_with 
+search group
 delete
+search modeprobe.d
+open_with 
