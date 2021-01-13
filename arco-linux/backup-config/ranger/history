@@ -1,6 +1,3 @@
-vim 
-touch me
-rename me.theme
 shell har
 shel
 s
@@ -45,6 +42,9 @@ search
 fin
 search skel
 search group
-delete
 search modeprobe.d
 open_with 
+search asound
+open_with less
+search modprobe
+delete

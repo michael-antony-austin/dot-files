@@ -1,3 +1,9 @@
+
+# zsh
+bindkey -e
+
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
