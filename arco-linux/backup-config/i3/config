@@ -432,6 +432,7 @@ bindsym $mod+Shift+c exec --no-startup-id guvcview
 bindsym $mod+a exec --no-startup-id lxappearance
 bindsym $mod+Shift+a exec --no-startup-id xfce4-appearance-settings
 bindsym $mod+Shift+m exec --no-startup-id signal-desktop
+bindsym $mod+e exec --no-startup-id gedit
 #####################################################################################################################
 #################                          custom                                                   #################
 #####################################################################################################################

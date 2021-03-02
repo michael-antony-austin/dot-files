@@ -1,4 +1,3 @@
-shell har
 shel
 s
 search xfce4
@@ -47,4 +46,5 @@ open_with
 search asound
 open_with less
 search modprobe
+search vi
 delete
