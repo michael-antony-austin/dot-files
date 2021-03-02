@@ -3,6 +3,7 @@ export PS1
 ################################################################3
 ####################PERSONAL ALIASES#############################3
 #############################################################33##
+alias docx="libreoffice --headless --convert-to pdf"
 alias ra="ranger"
 alias img="img2pdf"
 alias xbp="vim ~/.bashrc-personal"
@@ -13,6 +14,7 @@ alias xx="vim ~/.Xresources"
 alias xv="vim ~/.vimrc"
 alias xa='vim ~/.config/awesome/rc.lua'
 alias xq='vim ~/.config/qtile/config.py'
+alias ymp3="youtube-dl --extract-audio --audio-format mp3"
 alias backup='rsync -av /home/mike/.bashrc /home/mike/.zshrc /home/mike/.zshrc-personal /home/mike/.local/share/fonts /home/mike/.bashrc-personal /home/mike/.vimrc /home/mike/.Xresources /home/mike/.config/termite/config /home/mike/.vim /home/mike/.config/i3 /home/mike/.config/wm-wallpapers /home/mike/.config/awesome /home/mike/.config/polybar /home/mike/.config/ranger /home/mike/Public/dot-files/arco-linux/backup-config/'
 
 

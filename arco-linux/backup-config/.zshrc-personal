@@ -1,5 +1,6 @@
 # For personal ALIASES
 
+alias docx="libreoffice --headless --convert-to pdf"
 alias ra="ranger"
 alias pacman="pacman --color auto"
 alias update='sudo pacman -Syyu'
@@ -17,8 +18,7 @@ alias xp='vim ~/.config/polybar/config'
 alias xv='vim ~/.vimrc'
 alias xx='vim ~/.Xresources'
 alias xq="vim ~/.config/qtile/config.py"
-alias yta-mp3='youtube-dl --extract-audio --audio-format mp3 '
-alias ytv-best='youtube-dl -f bestvideo+bestaudio '
+alias ymp3='youtube-dl --extract-audio --audio-format mp3 '
 alias upall='mirror && yay -Syu --noconfirm'
 alias merge='xrdb -merge ~/.Xresources'
 alias mirror='sudo reflector --verbose --latest 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist'
