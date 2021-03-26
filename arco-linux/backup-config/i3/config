@@ -392,7 +392,7 @@ exec_always --no-startup-id numlockx off
 #exec --no-startup-id xfce4-clipman
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 exec_always --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/arthur-shelby.jpg
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/life-70.jpg
 #exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/glorious-voyage-3840x2160.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -419,8 +419,8 @@ bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
-bindsym $mod+p exec --no-startup-id thunar;focus
-bindsym $mod+Shift+p exec --no-startup-id pcmanfm;focus
+bindsym $mod+Shift+p exec --no-startup-id thunar;focus
+bindsym $mod++p exec --no-startup-id pcmanfm;focus
 bindsym $mod+g exec --no-startup-id gimp;focus 
 bindsym $mod+m exec --no-startup-id deadbeef;focus
 bindsym $mod+l exec --no-startup-id libreoffice;focus
