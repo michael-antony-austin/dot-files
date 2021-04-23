@@ -1,4 +1,3 @@
-shel
 s
 search xfce4
 search xdg
@@ -48,3 +47,4 @@ open_with less
 search modprobe
 search vi
 delete
+search poly
