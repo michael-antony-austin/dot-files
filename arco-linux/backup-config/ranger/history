@@ -1,9 +1,6 @@
-s
-search xfce4
 search xdg
 search doc
 search picom
-search fstab
 search etc
 search default
 search kbd
@@ -18,7 +15,6 @@ search backgro
 open_with vim
 search grub.d
 rename amd-dna.webp
-
 shell mkdir wm-wallpapers
 rename amd-radeon.jpg
 rename amd.jpg
@@ -46,5 +42,9 @@ search asound
 open_with less
 search modprobe
 search vi
-delete
 search poly
+
+shell ext NiteFlite-R\ -v1.2.tar.gz 
+search xsessions
+search fstab
+delete

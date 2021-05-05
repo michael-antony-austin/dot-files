@@ -193,7 +193,7 @@ bindsym $mod+Shift+r restart
 #####################################################################################################################
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $mod+Shift+q kill
 
 
 
@@ -419,7 +419,7 @@ bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
-bindsym $mod+Shift+p exec --no-startup-id thunar;focus
+bindsym $mod+Shift+p exec --no-startup-id nautilus;focus
 bindsym $mod++p exec --no-startup-id pcmanfm;focus
 bindsym $mod+g exec --no-startup-id gimp;focus 
 bindsym $mod+m exec --no-startup-id deadbeef;focus

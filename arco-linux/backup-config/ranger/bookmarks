@@ -1,6 +1,7 @@
 p:/
-':/home/mike/.config/polybar
+':/home/mike/.config
 c:/var/cache/pacman
 k:/home/mike/.local/share/xfce4
 y:/home/mike/Documents/answers
 l:/var/log
+e:/home/mike/.config/polybar
