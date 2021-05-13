@@ -412,9 +412,8 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 
 
-bindsym $mod+Return exec --no-startup-id termite;focus
+bindsym $mod+Return exec --no-startup-id xfce4-terminal;focus
 bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
-bindsym $mod+Control+Return exec --no-startup-id xfce4-terminal;focus
 bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
