@@ -1,4 +1,3 @@
-search xdg
 search doc
 search picom
 search etc
@@ -47,4 +46,5 @@ search poly
 shell ext NiteFlite-R\ -v1.2.tar.gz 
 search xsessions
 search fstab
+rename anonymous.jpg
 delete
