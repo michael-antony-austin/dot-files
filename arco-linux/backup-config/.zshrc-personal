@@ -71,5 +71,4 @@ myskel () {
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/i3/system-overview /home/mike/.config/i3/system-overview
 	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/rc.lua /home/mike/.config/awesome/rc.lua
         cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/awesome/system-overview /home/mike/.config/awesome/system-overview
-	cp -Rf /home/mike/Public/dot-files/arco-linux/backup-config/config /home/mike/.config/termite/config
 }
