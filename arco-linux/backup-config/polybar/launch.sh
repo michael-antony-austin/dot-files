@@ -19,13 +19,6 @@ count=$(xrandr --query | grep " connected" | cut -d" " -f1 | wc -l)
 case $desktop in
 
     i3|/usr/share/xsessions/i3)
-     if type "xrandr" > /dev/null; then
-       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-         MONITOR=$m polybar --reload mainbar-i3-extra -c ~/.config/polybar/config &
-       done
-     else
-     polybar --reload mainbar-i3-extra -c ~/.config/polybar/config &
-     fi
     if type "xrandr" > /dev/null; then
       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
         MONITOR=$m polybar --reload mainbar-i3 -c ~/.config/polybar/config &
@@ -33,8 +26,15 @@ case $desktop in
     else
     polybar --reload mainbar-i3 -c ~/.config/polybar/config &
     fi
-     second polybar at bottom
-    ;;
+        second polybar at bottom
+     if type "xrandr" > /dev/null; then
+       for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+         MONITOR=$m polybar --reload mainbar-i3-extra -c ~/.config/polybar/config &
+       done
+     else
+     polybar --reload mainbar-i3-extra -c ~/.config/polybar/config &
+     fi
+;;
 
     openbox|/usr/share/xsessions/openbox)
     if type "xrandr" > /dev/null; then

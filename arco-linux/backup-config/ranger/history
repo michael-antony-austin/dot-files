@@ -10,7 +10,6 @@ search usr
 search background
 search share
 search backgro
-open_with vim
 search grub.d
 rename amd-dna.webp
 shell mkdir wm-wallpapers
@@ -32,7 +31,6 @@ y
 rename system-overview
 search 
 fin
-search skel
 search group
 search modeprobe.d
 open_with 
@@ -46,5 +44,7 @@ shell ext NiteFlite-R\ -v1.2.tar.gz
 search xsessions
 search fstab
 rename anonymous.jpg
-delete
 search i3
+search skel
+open_with vim
+delete

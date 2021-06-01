@@ -2,6 +2,9 @@
 # zsh
 bindkey -e
 
+if [ -d "$HOME/.bin" ] ;
+  then PATH="$HOME/.bin:$PATH"
+fi
 
 
 # Lines configured by zsh-newuser-install
