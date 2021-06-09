@@ -1,13 +1,3 @@
-search picom
-search etc
-search default
-search kbd
-search no
-search back
-vim system-overview
-shell vim system-overview
-search usr
-search background
 search share
 search backgro
 search grub.d
@@ -15,7 +5,6 @@ rename amd-dna.webp
 shell mkdir wm-wallpapers
 rename amd-radeon.jpg
 rename amd.jpg
-search wm
 find 
 shell 
 c
@@ -33,9 +22,7 @@ search
 fin
 search group
 search modeprobe.d
-open_with 
 search asound
-open_with less
 search modprobe
 search vi
 search poly
@@ -45,6 +32,19 @@ search xsessions
 search fstab
 rename anonymous.jpg
 search i3
+search .config
+search wm
+rename ContrastHighInverseCyan
+search pacman
+search pacman.conf
+search pac
+search doc
+search profile
+search sel
 search skel
+search picture
+search soun
+open_with less
+open_with 
 open_with vim
 delete

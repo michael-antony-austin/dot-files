@@ -2,10 +2,10 @@
 " Filename: plugin/lightline.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2020/03/16 19:08:41.
+" Last Change: 2020/11/05 20:05:40.
 " =============================================================================
 
-if exists('g:loaded_lightline') || v:version < 700
+if exists('g:loaded_lightline') || v:version < 703
   finish
 endif
 let g:loaded_lightline = 1
@@ -31,12 +31,3 @@ let g:qf_disable_statusline = 1
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
-
-
-let g:lightline = {
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
-      \ }
-      \ }
-
-

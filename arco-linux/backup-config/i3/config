@@ -392,7 +392,7 @@ exec_always --no-startup-id numlockx off
 #exec --no-startup-id xfce4-clipman
 exec_always --no-startup-id picom --config ~/.config/i3/picom.conf
 exec_always --no-startup-id conky -c ~/.config/i3/system-overview
-exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/alone.jpg
+exec_always --no-startup-id feh --bg-fill /home/mike/.config/wm-wallpapers/hack-2.jpg
 #exec_always --no-startup-id feh --bg-fill /usr/share/backgrounds/arcolinux/glorious-voyage-3840x2160.jpg
 exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
@@ -418,7 +418,7 @@ bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
-bindsym $mod+Shift+p exec --no-startup-id nautilus;focus
+bindsym $mod+Shift+p exec --no-startup-id nemo;focus
 bindsym $mod++p exec --no-startup-id pcmanfm;focus
 bindsym $mod+g exec --no-startup-id gimp;focus 
 bindsym $mod+m exec --no-startup-id deadbeef;focus
@@ -555,7 +555,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20 # decrease
 
 
 # Border control
-hide_edge_borders both
+hide_edge_borders smart
 bindsym $mod+grave exec --no-startup-id i3-msg border toggle
 
 
@@ -592,7 +592,7 @@ popup_during_fullscreen smart
 
 for_window [class="^.*"] border pixel 3
 gaps inner 2
-gaps outer 8
+gaps outer 7
 smart_borders on
 #smart_gaps on
 
@@ -709,4 +709,7 @@ bindsym $mod+Shift+bracketright    gaps outer current minus 10
 
 # get the mouse out of the way with unclutter
 #exec --no-startup-id unclutter
+
+
+
 

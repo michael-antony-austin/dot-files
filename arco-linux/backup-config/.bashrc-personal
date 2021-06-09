@@ -3,6 +3,7 @@ export PS1
 ################################################################3
 ####################PERSONAL ALIASES#############################3
 #############################################################33##
+alias timec="sudo ntpd -qg; sudo hwclock --systohc"
 alias docx="libreoffice --headless --convert-to pdf"
 alias ra="ranger"
 alias img="img2pdf"

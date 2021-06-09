@@ -7,6 +7,18 @@ if [ -d "$HOME/.bin" ] ;
 fi
 
 
+# Important aliases
+
+alias ls='ls --color=auto'
+alias df='df -h'
+alias free="free -mth"
+alias merge="xrdb -merge ~/.Xresources"
+alias unlock="sudo rm /var/lib/pacman/db.lck"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+
+
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=100000
