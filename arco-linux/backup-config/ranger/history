@@ -45,6 +45,6 @@ search skel
 search picture
 search soun
 open_with less
-open_with 
-open_with vim
 delete
+open_with vim
+open_with 
