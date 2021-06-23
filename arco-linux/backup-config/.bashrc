@@ -71,8 +71,8 @@ alias merge="xrdb -merge ~/.Xresources"
 
 # Aliases for software managment
 # pacman or pm
-alias update='sudo pacman -Syyu'
-alias upall="mirror && sudo pacman -Syyu --noconfirm"
+alias update='sudo pacman -Syyu --noconfirm'
+alias upall='mirror && sudo pacman -Syyu --noconfirm'
 
 #ps
 alias psa="ps auxf"
@@ -116,7 +116,8 @@ alias trizenskip='trizen -S --skipinteg'
 alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
 
 #get fastest mirrors in your neighborhood
-alias mirror="sudo reflector --verbose  --number 10 --sort age --sort score  --protocol https --save /etc/pacman.d/mirrorlist"
+alias mirror="sudo reflector --verbose --sort age --number 25 --score 10 --ipv6 --save /etc/pacman.d/mirrorlist"
+alias mirror="sudo reflector --verbose  --number 50 --sort age --sort score --sort delay --protocol https --save /etc/pacman.d/mirrorlist"
 alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --protocol https --save /etc/pacman.d/mirrorlist"
 alias mirrors="sudo reflector --latest 30 --number 10 --sort score --protocol https --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 30 --number 10 --sort age  --protocol https --save /etc/pacman.d/mirrorlist"
@@ -145,7 +146,6 @@ alias yta-opus="youtube-dl --extract-audio --audio-format opus "
 alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
 #Recent Installed Packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
