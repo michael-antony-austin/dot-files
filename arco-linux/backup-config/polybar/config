@@ -125,7 +125,7 @@ font-2 = "Noto Sans:size=9;2"
 font-3 = "Noto Sans Mono:size=9;2"
 
 modules-left = date temperature2 memory1 memory3 cpu1 load-average networkspeedup 
-modules-center = 
+modules-center = network
 modules-right =  networkspeeddown battery xbacklight volume kernel 
 
 ;separator = |
@@ -875,7 +875,8 @@ format-online-background = ${colors.background}
 [module/networkspeedup]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp2s0
+;interface = wlp2s0
+interface = enp4s0
 interval = 0.5
 ;interface = enp14s0
 ;interface = enp0s31f6
@@ -893,7 +894,8 @@ format-connected-underline = #FE522C
 [module/networkspeeddown]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp2s0
+;interface = wlp2s0
+interface = enp4s0
 interval = 0.5
 ;interface = enp14s0
 ;interface = enp0s31f6
@@ -1144,7 +1146,7 @@ tail = true
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp4s0
+interface = enp0s29u1u5
 ;interface = enp14s0
 interval = 3.0
 
@@ -1280,11 +1282,11 @@ type = internal/network
 ; Name of the network interface to display. You can get the names of the
 ; interfaces on your machine with `ip link`
 ; Wireless interfaces often start with `wl` and ethernet interface with `eno` or `eth`
-interface = wlp2s0
+interface = enp0s29u1u5
 
 ; Seconds to sleep between updates
 ; Default: 1
-interval = 3.0
+interval = 1
 
 ; Test connectivity every Nth update
 ; A value of 0 disables the feature
@@ -1295,7 +1297,7 @@ interval = 3.0
 ; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
 ; Minimum output width of upload/download rate
 ; Default: 3
-udspeed-minwidth = 5
+udspeed-minwidth = 3
 
 ; Accumulate values from all interfaces
 ; when querying for up/downspeed rate
@@ -1311,7 +1313,13 @@ unknown-as-up = true
 ; Available tags:
 ;   <label-connected> (default)
 ;   <ramp-signal>
-format-connected = <label-connected>
+format-connected = <label-connected>
+format-connected-foreground = #00ff00
+format-connected-background = #00000000
+format-connected-prefix = " "
+format-connected-prefix-foreground = #ff0000
+format-connected-prefix-background = #000000
+
 
 ; Available tags:
 ;   <label-disconnected> (default)
@@ -1334,35 +1342,29 @@ format-packetloss = <animation-packetloss> <label-connected>
 ;   %linkspeed% [wired]
 
 ; Default: %ifname% %local_ip%
-format-connected-prefix = ""
-format-connected-prefix-foreground = #3EC13F
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
-label-connected = %upspeed%  %downspeed:9%|
-label-connected-foreground = #ffffff
-label-connected-background = #000000ff
-
+label-connected = %upspeed% %downspeed%
+label-connected-foreground = #eefafafa
+label-connected-background = #00000000
 ; Default: (none)
 label-disconnected = not connected
-label-disconnected-foreground = #ffffff
+;label-disconnected-foreground = #66ffffff
 
 ; Default: (none)
 ;label-packetloss = %essid%
 ;label-packetloss-foreground = #eefafafa
 
 ; Only applies if <ramp-signal> is used
-ramp-signal-0 = 😱
-ramp-signal-1 = 😠
-ramp-signal-2 = 😒
-ramp-signal-3 = 😊
-ramp-signal-4 = 😃
-ramp-signal-5 = 😈
+ramp-signal-0 = ð±
+ramp-signal-1 = ð 
+ramp-signal-2 = ð
+ramp-signal-3 = ð
+ramp-signal-4 = ð
+ramp-signal-5 = ð
 
 ; Only applies if <animation-packetloss> is used
-animation-packetloss-0 = ⚠
-animation-packetloss-0-foreground = #ffffffff
-animation-packetloss-1 = 📶
-animation-packetloss-1-foreground = #ffffffff
+animation-packetloss-0 = â 
+animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-1 = ð¶
+animation-packetloss-1-foreground = #000000
 ; Framerate in milliseconds
 animation-packetloss-framerate = 500
-

@@ -24,7 +24,7 @@
 # Pause = PAUSE key
 # Print = PRINT key
 # Tab = TAB key
-
+exec_always --no-startup-id xmodmap -e "keycode 135 = Super_R" && xset -r 135
 
 #####################################################################################################################
 #################                          Define the $mod variable/key                             #################
@@ -134,7 +134,7 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 
 
 #####################################################################################################################
-#################                          3 menu's in arcolinux                                     #################
+#################                          i3 menu's in arcolinux                                     #################
 #####################################################################################################################
 
 # start dmenu
@@ -413,7 +413,8 @@ exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 
 bindsym $mod+Return exec --no-startup-id xfce4-terminal;focus
-bindsym $mod+Shift+Return exec --no-startup-id urxvt;focus
+bindsym $mod+Shift+Return exec --no-startup-id sakura;focus
+bindsym $mod+Control+Return exec --no-startup-id terminology;focus
 bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus

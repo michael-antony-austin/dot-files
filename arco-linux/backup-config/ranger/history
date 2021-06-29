@@ -1,22 +1,3 @@
-rename config
-shell vim i3-alternating-layouts.py
-rename alternating_layouts.py
-search pacman.d
-rename picom.conf.bak
-rename picom.conf
-search down
-shell ext lucy-2014-english-yify-57997.zip 
-rename system-overview
-search 
-fin
-search group
-search modeprobe.d
-search asound
-search modprobe
-search vi
-search poly
-shell ext NiteFlite-R\ -v1.2.tar.gz 
-search xsessions
 rename anonymous.jpg
 search i3
 search .config
@@ -31,20 +12,39 @@ search skel
 search picture
 search soun
 open_with less
-open_with 
 find 
 search fstab
-open_with vim
 y
 search pacman
-delete
 search vid
 find vim
 
 find lin
-find vid
 find l
 search rsync
 search curl
 search wget
+find a
+find b
+find i3
+find config
+open_with vim
+find su
+find the
 find pu
+delete
+search ter
+search termino
+open_with 
+find vi
+find vid
+find doc
+find li
+find et
+find dev-
+open_with zathura
+find sh
+find plu
+find zs
+find pl
+find inputr

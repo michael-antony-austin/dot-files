@@ -6,16 +6,27 @@ if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
 
+# Colorful pagers(man,less)
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 # Important aliases
 
 alias ls='ls --color=auto'
 alias df='df -h'
+alias grep='grep --color=auto'
 alias free="free -mth"
 alias merge="xrdb -merge ~/.Xresources"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias yta-mp3="youtube-dl --extract-audio --audio-format mp3 "
+alias yt='youtube-dl'
+alias probe="sudo -E hw-probe -all -upload"
 
 
 
@@ -37,6 +48,7 @@ setopt HIST_SAVE_NO_DUPS
 # Command completion
 autoload -Uz compinit
 compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 # prompt ZSH
 autoload -Uz promptinit
