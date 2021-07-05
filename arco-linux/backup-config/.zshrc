@@ -18,7 +18,7 @@ export LESS_TERMCAP_us=$'\e[1;4;31m'
 # Important aliases
 
 alias ls='ls --color=auto'
-alias df='df -h'
+alias df='df -Th'
 alias grep='grep --color=auto'
 alias free="free -mth"
 alias merge="xrdb -merge ~/.Xresources"

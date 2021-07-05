@@ -124,9 +124,9 @@ font-1 = "FontAwesome:size=9;2"
 font-2 = "Noto Sans:size=9;2"
 font-3 = "Noto Sans Mono:size=9;2"
 
-modules-left = date temperature2 memory1 memory3 cpu1 load-average networkspeedup 
-modules-center = network
-modules-right =  networkspeeddown battery xbacklight volume kernel 
+modules-left = date temperature2 memory1 memory3 cpu1 load-average 
+modules-center = wireless-network wired-network
+modules-right = battery xbacklight volume kernel 
 
 ;separator = |
 
@@ -1146,9 +1146,9 @@ tail = true
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp0s29u1u5
+interface = enp4s0 
 ;interface = enp14s0
-interval = 3.0
+interval = 1
 
 ; Available tokens:
 ;   %ifname%    [wireless+wired]
@@ -1159,11 +1159,11 @@ interval = 3.0
 ;   %downspeed% [wireless+wired]
 ;   %linkspeed% [wired]
 ; Default: %ifname% %local_ip%
-label-connected =  %ifname%
-label-disconnected = %ifname% disconnected
+label-connected =  %upspeed% %downspeed%
+label-disconnected =  
 
-format-connected-foreground = ${colors.foreground}
-format-connected-background = ${colors.background}
+format-connected-foreground = #ffffff
+format-connected-background = #000000 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
 format-connected-prefix-foreground = #55aa55
@@ -1178,9 +1178,9 @@ label-disconnected-foreground = ${colors.foreground}
 [module/wireless-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = wlp3s0
-interval = 3.0
-label-connected = %essid%
+interface = wlp2s0
+interval = 1
+label-connected = %upspeed% %downspeed%
 
 format-connected = <label-connected>
 ;format-connected = <ramp-signal> <label-connected>
@@ -1191,7 +1191,7 @@ format-connected-prefix-foreground = #7e52c6
 format-connected-prefix-background = ${colors.background}
 format-connected-underline = #7e52c6
 
-label-disconnected = %ifname% disconnected
+label-disconnected = 
 label-disconnected-foreground = ${colors.alert}
 label-disconnected-background = ${colors.background}
 

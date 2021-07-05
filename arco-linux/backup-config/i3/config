@@ -419,8 +419,9 @@ bindsym  --release $mod+Escape exec xkill
 bindsym $mod+b exec --no-startup-id firefox;focus 
 bindsym $mod+Shift+b exec --no-startup-id brave;focus
 bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
+bindsym $mod+Control+p exec --no-startup-id pcmanfm;focus
 bindsym $mod+Shift+p exec --no-startup-id nemo;focus
-bindsym $mod++p exec --no-startup-id pcmanfm;focus
+bindsym $mod+p exec --no-startup-id thunar;focus
 bindsym $mod+g exec --no-startup-id gimp;focus 
 bindsym $mod+m exec --no-startup-id deadbeef;focus
 bindsym $mod+l exec --no-startup-id libreoffice;focus
@@ -455,11 +456,10 @@ bindsym $mod+Ctrl+Print exec --no-startup-id xfce4-screenshooter
 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 #for_window [class="Arcolinux-tweak-tool.py"] floating enable
-for_window [class="Bleachbit"] floating disable
-for_window [class="Blueberry.py"] floating enable
-for_window [class="Brasero"] floating disable
-for_window [class="Galculator"] floating enable
-for_window [class="Gnome-disks"] floating disable
+for_window [class="mpv"] floating enable
+for_window [class="Lxappearance"] floating enable
+for_window [class="Sakura"] floating enable;focus
+for_window [class="Deadbeef"] floating enable
 for_window [class="^Gnome-font-viewer$"] floating enable
 for_window [class="^Gpick$"] floating enable
 for_window [class="Hexchat"] floating disable
@@ -467,7 +467,7 @@ for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 #for_window [class="qt5ct|Lxappearance] floating enable
 for_window [class="Nitrogen"] floating disable
-for_window [class="Pavucontrol"] floating disable
+for_window [class="Pavucontrol"] floating enable
 for_window [class="Peek"] floating enable
 for_window [class="^Skype$"] floating enable
 for_window [class="^Spotify$"] floating disable
@@ -480,6 +480,7 @@ for_window [class="Xfburn"] floating disable
 for_window [class="Xfce4-appfinder"] floating enable
 for_window [class="Xfce4-settings-manager"] floating disable
 for_window [class="Xfce4-taskmanager"] floating enable
+for_window [class="Blueberry.py"] floating enable
 
 
 #for_window [instance="gimp"] floating disable
@@ -510,7 +511,7 @@ for_window [window_role="setup"] floating enable
 
 for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
-for_window [class="Terminator"] focus
+for_window [class="terminology"] focus
 
 
 
@@ -560,15 +561,11 @@ hide_edge_borders smart
 bindsym $mod+grave exec --no-startup-id i3-msg border toggle
 
 
-#new_window pixel 1
-new_window normal
-#new_window none
-
-#new_float pixel 1
-new_float normal
-#new_float none
+#default_border normal|pixel <px>
+#default_floating_border normal|none|pixel
 
 
+default_floating_border pixel 9
 
 
 #####################################################################################################################

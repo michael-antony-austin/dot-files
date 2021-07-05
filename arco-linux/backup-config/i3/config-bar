@@ -68,6 +68,7 @@ set $right semicolon
 #exec --no-startup-id xrandr --output DVI-I-0 --right-of HDMI-0 --auto
 #exec --no-startup-id xrandr --output DVI-1 --right-of DVI-0 --auto
 #exec --no-startup-id xrandr --output DVI-D-1 --right-of DVI-I-1 --auto
+#exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
 exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 
@@ -85,6 +86,9 @@ exec --no-startup-id xrandr --output HDMI2 --right-of HDMI1 --auto
 
 #set $firstMonitor DVI-I-1
 #set $secondMonitor DVI-D-1
+
+#set $firstMonitor HDMI-1
+#set $secondMonitor HDMI-2
 
 set $firstMonitor HDMI1
 set $secondMonitor HDMI2
@@ -133,17 +137,20 @@ bindsym $mod+Shift+0 move container to workspace 10; workspace 10
 # start dmenu
 bindsym $mod+shift+d exec --no-startup-id dmenu_run -i -nb '#191919' -nf '#fea63c' -sb '#fea63c' -sf '#191919' -fn 'NotoMonoRegular:bold:pixelsize=14'
 
-# gmrun
-bindsym mod1+F2 exec --no-startup-id gmrun
+# start xfce4-appfinder
+bindsym mod1+F2 exec --no-startup-id xfce4-appfinder --collapsed
 
 # start xfce-appfinder
 bindsym mod1+F3 exec --no-startup-id xfce4-appfinder
 
+# start xlunch app launcher
+#bindsym mod1+F5 exec --no-startup-id xlunch --config ~/.config/xlunch/default.conf --input ~/.config/xlunch/entries.dsv
+
 # start rofi full
-bindsym $mod+F11 exec --no-startup-id rofi -show run -fullscreen -font "Noto Sans 13"
+bindsym $mod+F11 exec --no-startup-id rofi -show drun -fullscreen -font "Noto Sans 13"
 
 # start rofi small
-bindsym $mod+F12 exec --no-startup-id rofi -show run -font "Noto Sans 13"
+bindsym $mod+F12 exec --no-startup-id rofi -show drun -font "Noto Sans 13"
 
 
 
@@ -300,36 +307,41 @@ bindsym $mod+a focus parent
 #################                          resize                                                   #################
 #####################################################################################################################
 
+# Resizing by 1
+bindsym $mod+Mod1+Ctrl+Right resize shrink width 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Up resize grow height 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Down resize shrink height 1 px or 1 ppt
+bindsym $mod+Mod1+Ctrl+Left resize grow width 1 px or 1 ppt
 
+
+####################################################################################################################
+#old resize keybindings
 # resize window (you can also use the mouse for that)
 
-bindsym $mod+r mode "resize"
+#bindsym $mod+r mode "resize"
 
-mode "resize" {
+#mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym $left       resize shrink width 10 px or 10 ppt
-        bindsym $down       resize grow height 10 px or 10 ppt
-        bindsym $up         resize shrink height 10 px or 10 ppt
-        bindsym $right      resize grow width 10 px or 10 ppt
+ #      bindsym $left       resize shrink width 10 px or 10 ppt
+ #      bindsym $down       resize grow height 10 px or 10 ppt
+ #      bindsym $up         resize shrink height 10 px or 10 ppt
+ #      bindsym $right      resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
+ #      bindsym Left        resize shrink width 10 px or 10 ppt
+ #      bindsym Down        resize grow height 10 px or 10 ppt
+ #      bindsym Up          resize shrink height 10 px or 10 ppt
+ #      bindsym Right       resize grow width 10 px or 10 ppt
 
         # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-
-
+ #      bindsym Return mode "default"
+ #      bindsym Escape mode "default"
+#}
 
 
 #####################################################################################################################
@@ -496,11 +508,11 @@ bindsym control+mod1+Next exec --no-startup-id conky-rotate -n
 bindsym control+mod1+Prior exec --no-startup-id conky-rotate -p
 
 # terminal
-bindsym $mod+Return exec --no-startup-id termite;focus
-bindsym $mod+KP_Enter exec --no-startup-id termite;focus
-bindsym control+mod1+t exec --no-startup-id termite; focus
-bindsym control+mod1+Return exec --no-startup-id termite; focus
-bindsym control+mod1+KP_Enter exec --no-startup-id termite; focus
+bindsym $mod+Return exec --no-startup-id urxvt;focus
+bindsym $mod+KP_Enter exec --no-startup-id urxvt;focus
+bindsym control+mod1+t exec --no-startup-id urxvt; focus
+bindsym control+mod1+Return exec --no-startup-id urxvt; focus
+bindsym control+mod1+KP_Enter exec --no-startup-id urxvt; focus
 bindsym F12 exec --no-startup-id xfce4-terminal --drop-down; focus
 
 #System monitor
@@ -612,6 +624,7 @@ bindsym Control+Shift+Print exec --no-startup-id gnome-screenshot -i
 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 #for_window [class="Arcolinux-tweak-tool.py"] floating enable
+for_window [class="Arcolinux-calamares-tool.py"] floating enable
 for_window [class="Bleachbit"] floating disable
 for_window [class="Blueberry.py"] floating enable
 for_window [class="Brasero"] floating disable
@@ -668,6 +681,7 @@ for_window [window_role="setup"] floating enable
 for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="Terminator"] focus
+for_window [class="Urxvt"] focus
 
 
 
@@ -926,36 +940,36 @@ bar {
 
 
     ##START THEMING BAR
-    #Theme name : ArcoLinux Ruins
+    #Theme name : ArcoLinux Firedust
 
     # i3 bar colors
     # variable border background Text
 
     colors {
-        background #303030
-        statusline #d0e1d4
-        separator  #c1d0c1
+        background #2F2F2F
+        statusline #eeeeee
+        separator  #666666
 
         # colorclass           border  backgr. text
-        focused_workspace     #FF6F54 #FF6F54 #FFF2CE
-        active_workspace      #FF6F54 #FF6F54 #FFF2CE
-        inactive_workspace    #64635f #64635f #a7afa9
-        urgent_workspace      #e82951 #e82951 #FFF2CE
+        focused_workspace     #a9a9a9 #5f676a #eeeeee
+        active_workspace      #a9a9a9 #5f676a #a9a9a9
+        inactive_workspace    #a9a9a9 #222222 #a9a9a9
+        urgent_workspace      #a9a9a9 #d42121 #FFFFFF
         }
 
     }
     ##STOP THEMING BAR
 
     ##START THEMING WM
-    #Theme name : ArcoLinux Ruins
+    #Theme name : ArcoLinux Firedust
 
     # Window color settings
     # class                 border  backgr. text    indicator
-    client.focused          #FF6F54 #FF6F54 #e5e5e5 #FF6F54
-    client.unfocused        #222222 #222222 #aaaaaa #222222
-    client.focused_inactive #222222 #222222 #aaaaaa #222222
-    client.placeholder      #222222 #222222 #aaaaaa #222222
-    client.urgent           #d42121 #d42121 #f7f7f7 #d42121
+    client.focused          #d64937 #d64937 #2D2D2D #d64937
+    client.unfocused        #2D2D2D #2d2d2d #dcdcdc #292d2e
+    client.focused_inactive #2d2d2d #2d2d2d #dcdcdc #484e50
+    client.placeholder      #2d2d2d #2d2d2d #dcdcdc #484e502
+    client.urgent           #2D2D2D #2D2D2D #dcdcdc #900000
 
     client.background       #242424
 
