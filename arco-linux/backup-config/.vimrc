@@ -14,6 +14,7 @@ filetype plugin indent on
 filetype plugin on
 filetype on
 set laststatus=2
+set mouse=n
 set number
 set ignorecase
 set hlsearch

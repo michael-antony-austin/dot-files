@@ -601,9 +601,9 @@ type = internal/date
 interval = 1
 ; See "http://en.cppreference.com/w/cpp/io/manip/put_time" for details on how to format the date string
 ; NOTE: if you want to use syntax tags here you need to use %%{...}
-date = " %d-%m-%Y"
+date = " %d-%m-%Y %A"
 date-alt = " %d-%m-%Y  %A"
-time = %H:%M
+time = %H:%M:%S
 time-alt = %H:%M:%S
 format-prefix = " "
 format-prefix-foreground = #c1941a

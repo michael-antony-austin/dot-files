@@ -1,10 +1,6 @@
-rename ContrastHighInverseCyan
-search pacman.conf
-search pac
 search doc
 search profile
 search sel
-search skel
 search picture
 search soun
 open_with less
@@ -44,7 +40,11 @@ search pacman
 find pacman.c
 find adj
 find loca
-open_with vim
 find pacman
 open_with 
+find dow
+rename artix-mate-runit-20210426-x86_64.iso.sha256
+rename geeqie
+search skel
 delete
+open_with vim
