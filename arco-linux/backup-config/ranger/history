@@ -1,7 +1,3 @@
-search doc
-search profile
-search sel
-search picture
 search soun
 open_with less
 find 
@@ -25,7 +21,6 @@ find pu
 search ter
 search termino
 find vi
-find doc
 find li
 find et
 find dev-
@@ -35,16 +30,21 @@ find plu
 find zs
 find pl
 find inputr
-find vid
 search pacman
 find pacman.c
 find adj
 find loca
 find pacman
 open_with 
-find dow
 rename artix-mate-runit-20210426-x86_64.iso.sha256
 rename geeqie
 search skel
-delete
 open_with vim
+rename skull2.jpg
+find wm
+find dow
+find doc
+find au
+find ske
+delete
+find vid
