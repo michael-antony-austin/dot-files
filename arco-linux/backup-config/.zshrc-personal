@@ -1,7 +1,7 @@
 # For personal ALIASES
 
 alias docx="libreoffice --headless --convert-to pdf"
-alias cat='cat -n'
+alias mv='mv -iv'
 alias timec="sudo ntpd -qg; sudo hwclock --systohc"
 alias ra="ranger"
 alias pacman="pacman --color auto"

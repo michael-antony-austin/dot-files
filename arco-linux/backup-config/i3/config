@@ -445,12 +445,13 @@ bindsym $mod+Ctrl+Print exec --no-startup-id xfce4-screenshooter
 
 for_window [class="Arcolinux-welcome-app.py"] floating enable
 #for_window [class="Arcolinux-tweak-tool.py"] floating enable
+for_window [class="Display"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Sakura"] floating enable;focus
 for_window [class="Deadbeef"] floating enable
 for_window [class="^Gnome-font-viewer$"] floating enable
-for_window [class="^Gpick$"] floating enable
+for_window [class="Pcmanfm"] floating enable
 for_window [class="Hexchat"] floating disable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable

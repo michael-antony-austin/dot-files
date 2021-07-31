@@ -90,11 +90,11 @@ URxvt.secondaryScroll:   0
 
 ! fonts
 URxvt*letterSpace: 	    		-1
-URxvt*font:                 	xft:DaddyTimeMono Nerd Font:Book:size=11
-URxvt*imFont:               	xft:DaddyTimeMono Nerd Font:Regular:size=11
-URxvt*italicFont:           	xft:DaddyTimeMono Nerd Font:Italic:size=11
-URxvt*boldFont:             	xft:DaddyTimeMono Nerd Font:Bold:size=11
-URxvt*boldItalicFont:  		xft:DaddyTimeMono Nerd Font:BoldItalic:size=11
+URxvt*font:                 	xft:Monospace:Regular:size=11
+URxvt*imFont:               	xft:Monospace:Regular:size=11
+URxvt*italicFont:           	xft:Monospace:Italic:size=11
+URxvt*boldFont:             	xft:Monospace:Bold:size=11
+URxvt*boldItalicFont:  		xft:Ubuntu Mono:BoldItalic:size=11
 ! run :.!fc-list | grep <font-name>
 
 ! perl extensions

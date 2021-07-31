@@ -1,19 +1,9 @@
-search soun
-open_with less
-find 
-search fstab
-y
-search vid
-find vim
-
-find lin
 find l
 search rsync
 search curl
 search wget
 find a
 find b
-find i3
 find config
 find su
 find the
@@ -42,9 +32,19 @@ search skel
 open_with vim
 rename skull2.jpg
 find wm
-find dow
 find doc
 find au
 find ske
-delete
 find vid
+find so
+find dow
+delete
+find .conf
+find i3
+
+find v
+search 
+find mang
+find rc
+find rang
+find sc

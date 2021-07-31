@@ -26,7 +26,7 @@ margin-bottom = 0
 ;https://github.com/jaagr/polybar/wiki/Configuration#application-settings
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
+;throttle-input-for = 30
 screenchange-reload = true
 compositing-background = over
 compositing-foreground = over
@@ -83,7 +83,7 @@ alert = #bd2c40
 [bar/mainbar-i3]
 ;https://github.com/jaagr/polybar/wiki/Configuration
 
-monitor = ${env:MONITOR}
+;monitor = ${env:MONITOR}
 ;monitor-fallback = HDMI1
 monitor-strict = false
 override-redirect = false
@@ -125,7 +125,7 @@ font-2 = "Noto Sans:size=9;2"
 font-3 = "Noto Sans Mono:size=9;2"
 
 modules-left = date temperature2 memory1 memory3 cpu1 load-average 
-modules-center = wireless-network wired-network
+modules-center = wireless-network wired-network network
 modules-right = battery xbacklight volume kernel 
 
 ;separator = |
@@ -1096,7 +1096,7 @@ click-left = variety --selector
 
 [module/volume]
 ;https://github.com/jaagr/polybar/wiki/Module:-volume
-type = internal/volume
+type = internal/alsa
 format-volume = "<label-volume>  <bar-volume>"
 format-volume-underline = #40ad4b 
 
@@ -1297,7 +1297,7 @@ interval = 1
 ; @deprecated: Define min width using token specifiers (%downspeed:min% and %upspeed:min%)
 ; Minimum output width of upload/download rate
 ; Default: 3
-udspeed-minwidth = 3
+;udspeed-minwidth = 3
 
 ; Accumulate values from all interfaces
 ; when querying for up/downspeed rate
