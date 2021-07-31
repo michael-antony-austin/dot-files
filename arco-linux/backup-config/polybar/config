@@ -125,7 +125,7 @@ font-2 = "Noto Sans:size=9;2"
 font-3 = "Noto Sans Mono:size=9;2"
 
 modules-left = date temperature2 memory1 memory3 cpu1 load-average 
-modules-center = wireless-network wired-network network
+modules-center = wireless-network network
 modules-right = battery xbacklight volume kernel 
 
 ;separator = |
@@ -1146,8 +1146,7 @@ tail = true
 [module/wired-network]
 ;https://github.com/jaagr/polybar/wiki/Module:-network
 type = internal/network
-interface = enp4s0 
-;interface = enp14s0
+interface =  enp0s29u1u5
 interval = 1
 
 ; Available tokens:
