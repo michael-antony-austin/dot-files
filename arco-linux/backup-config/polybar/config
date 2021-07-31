@@ -1313,7 +1313,7 @@ unknown-as-up = true
 ; Available tags:
 ;   <label-connected> (default)
 ;   <ramp-signal>
-format-connected = <label-connected>
+format-connected =  <label-connected>
 format-connected-foreground = #00ff00
 format-connected-background = #00000000
 format-connected-prefix = " "
