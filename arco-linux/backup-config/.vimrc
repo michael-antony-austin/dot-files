@@ -21,3 +21,4 @@ set hlsearch
 set incsearch
 set nocompatible
 set noshowmode
+set relativenumber

@@ -131,8 +131,6 @@ bindsym $mod+F4 exec --no-startup-id xfce4-settings-manager
 #################                          how to exit, logoff, suspend, ...                        #################
 #####################################################################################################################
 
-######Backup exit
-######Press ctrl+alt+x - check toolbar for next choices
 #####bindsym control+mod1+X mode "$mode_system"
 #####
 #####set $mode_system System (k) lock, (l) logout, (u) suspend, (h) hibernate, (r) reboot, (s) shutdown
@@ -153,6 +151,7 @@ bindsym $mod+F4 exec --no-startup-id xfce4-settings-manager
 # ArcoLinux Logout
 bindsym $mod+Delete exec --no-startup-id arcolinux-logout
 bindsym $mod+Ctrl+Delete exec --no-startup-id "shutdown -h now"
+bindsym $mod+Control+l exec --no-startup-id i3lock -e -f -i /home/mike/.config/wm-wallpapers/arch-key.jpg
 
 #####################################################################################################################
 #################                          reload changed configuration                             #################
@@ -395,35 +394,32 @@ exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd &
 
 #####################################################################################################################
-#################                          applications keyboard shortcuts                          #################
+#################                          apps keyboard shortcuts                          #################
 #####################################################################################################################
 
-
-
-bindsym $mod+Return exec --no-startup-id xfce4-terminal;focus
-bindsym $mod+Shift+Return exec --no-startup-id sakura;focus
-bindsym $mod+Control+Return exec --no-startup-id terminology;focus
-bindsym $mod+Mod1+Return exec --no-startup-id urxvt;focus
-bindsym  --release $mod+Escape exec xkill
-bindsym $mod+b exec --no-startup-id firefox;focus 
-bindsym $mod+Shift+b exec --no-startup-id brave;focus
-bindsym $mod+Control+b exec --no-startup-id google-chrome-stable;focus
-bindsym $mod+Control+p exec --no-startup-id pcmanfm;focus
-bindsym $mod+Shift+p exec --no-startup-id nemo;focus
-bindsym $mod+p exec --no-startup-id thunar;focus
-bindsym $mod+g exec --no-startup-id gimp;focus 
-bindsym $mod+m exec --no-startup-id deadbeef;focus
-bindsym $mod+l exec --no-startup-id libreoffice;focus
-bindsym $mod+v exec --no-startup-id pavucontrol;focus
-bindsym $mod+t exec --no-startup-id gpicview
-bindsym $mod+s exec --no-startup-id scrcpy
-bindsym $mod+c exec --no-startup-id cheese
-bindsym $mod+Shift+c exec --no-startup-id guvcview
-bindsym $mod+a exec --no-startup-id lxappearance
-bindsym $mod+Shift+a exec --no-startup-id xfce4-appearance-settings
-bindsym $mod+Shift+m exec --no-startup-id signal-desktop
-bindsym $mod+e exec --no-startup-id gedit
-bindsym $mod+Control+l exec --no-startup-id i3lock -e -f -i /home/mike/.config/wm-wallpapers/arch-key.jpg
+bindsym $mod+Return exec --no-startup-id          xfce4-terminal;focus
+bindsym $mod+Shift+Return exec --no-startup-id    sakura;focus
+bindsym $mod+Control+Return exec --no-startup-id  terminology;focus
+bindsym $mod+Mod1+Return exec --no-startup-id     urxvt;focus
+bindsym  --release $mod+Escape exec               xkill
+bindsym $mod+b exec --no-startup-id               firefox;focus 
+bindsym $mod+Shift+b exec --no-startup-id         brave;focus
+bindsym $mod+Control+b exec --no-startup-id       brave --incognito;focus
+bindsym $mod+Control+p exec --no-startup-id       pcmanfm;focus
+bindsym $mod+Shift+p exec --no-startup-id         nemo;focus
+bindsym $mod+p exec --no-startup-id               thunar;focus
+bindsym $mod+g exec --no-startup-id               gimp;focus 
+bindsym $mod+m exec --no-startup-id               deadbeef;focus
+bindsym $mod+l exec --no-startup-id               libreoffice;focus
+bindsym $mod+v exec --no-startup-id               pavucontrol;focus
+bindsym $mod+t exec --no-startup-id               gpicview
+bindsym $mod+s exec --no-startup-id               scrcpy
+bindsym $mod+c exec --no-startup-id               cheese
+bindsym $mod+Shift+c exec --no-startup-id         guvcview
+bindsym $mod+a exec --no-startup-id               lxappearance
+bindsym $mod+Shift+a exec --no-startup-id         xfce4-appearance-settings
+bindsym $mod+Shift+m exec --no-startup-id         signal-desktop
+bindsym $mod+e exec --no-startup-id               gedit
 #####################################################################################################################
 #################                          custom                                                   #################
 #####################################################################################################################
@@ -449,10 +445,10 @@ for_window [class="Display"] floating enable
 for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="Sakura"] floating enable;focus
-for_window [class="Deadbeef"] floating enable
+for_window [class="Deadbeef"] floating enable 
 for_window [class="^Gnome-font-viewer$"] floating enable
 for_window [class="Pcmanfm"] floating enable
-for_window [class="Hexchat"] floating disable
+for_window [class="Gpicview"] floating enable
 for_window [class="Imagewriter"] floating enable
 for_window [class="Font-manager"] floating enable
 #for_window [class="qt5ct|Lxappearance] floating enable
@@ -502,6 +498,7 @@ for_window [window_role="setup"] floating enable
 for_window [class="Gnome-terminal"] focus
 for_window [class="Termite"] focus
 for_window [class="terminology"] focus
+for_window [class="URxvt"] fullscreen
 
 
 

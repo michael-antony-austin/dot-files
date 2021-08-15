@@ -6,6 +6,10 @@ if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
 
+# Auto suggestion and Syntax highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # Colorful pagers(man,less)
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -35,7 +39,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=100000
 SAVEHIST=100000
 
-
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -55,9 +58,11 @@ autoload -Uz promptinit
 promptinit
 prompt adam2
 
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 ## PERSONAL ALIASES
 [[ -f ~/.zshrc-personal ]] && . ~/.zshrc-personal
+
+## Changing the syntax colour to blue
+
+ZSH_HIGHLIGHT_STYLES[suffix-alias]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[precommand]=fg=blue,bold
+ZSH_HIGHLIGHT_STYLES[arg0]=fg=blue,bold
